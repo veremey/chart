@@ -47,7 +47,8 @@ function generateData() {
 			"url" : changes[i].url,
 			"label": changes[i].title,
 			"backgroundColor": color,
-			"borderColor": color
+			"borderColor": color,
+			"hoverBorderColor" : color
 				}
 			);
 	}
@@ -69,10 +70,6 @@ var options = {
 			},
 
 			hoverBackgroundColor: 'transparent',
-
-			// hoverBorderColor: function(context) {
-			// 	return utils.color(context.datasetIndex);
-			// },
 
 			hoverBorderWidth: function(context) {
 				var value = context.dataset.data[context.dataIndex];
