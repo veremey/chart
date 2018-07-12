@@ -1,0 +1,53 @@
+  {
+  "datasets": [
+    {
+      "label": "John12",
+      "data": [
+        {
+          "x": "13",
+          "y": "17",
+          "r": "20"
+        }
+      ],
+      "backgroundColor":"#18a0d4",
+      "hoverBackgroundColor": "#00f",
+      "title": "www.google.com"
+    },
+    {
+      "label": "Paul",
+        "data": [
+          {
+            "x": "26",
+            "y": "22",
+             "r": "40"
+        }
+      ],
+      "backgroundColor":"#fcff26",
+      "hoverBackgroundColor": "#fcff26"
+    },
+    {
+      "label": "George",
+        "data": [
+          {
+            "x": "2",
+            "y": "6",
+            "r": "40"
+          }
+        ],
+        "backgroundColor":"#fcff26",
+        "hoverBackgroundColor": "#fcff26"
+    },
+    {
+      "label": "Ringo",
+        "data": [
+          {
+            "x": "5",
+            "y": "3",
+            "r": "40"
+          }
+        ],
+        "backgroundColor":"#18a0d4",
+        "hoverBackgroundColor": "#18a0d4"
+    }
+  ]
+}
