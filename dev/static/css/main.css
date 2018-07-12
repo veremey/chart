@@ -409,7 +409,8 @@ html, body {
 }
 
 canvas.chartjs-render-monitor {
-  background-color: rgba(5, 57, 84, 0.8);
+  -webkit-animation: colorchange 50s infinite linear;
+          animation: colorchange 50s infinite linear;
 }
 
 .content {
@@ -419,6 +420,48 @@ canvas.chartjs-render-monitor {
 .wrapper {
   position: relative;
   padding: 0;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    background: rgba(84, 5, 13, 0.8);
+  }
+  25% {
+    background: rgba(26, 193, 228, 0.8);
+  }
+  50% {
+    background: rgba(14, 84, 5, 0.8);
+  }
+  75% {
+    background: rgba(172, 228, 26, 0.8);
+  }
+  90% {
+    background: rgba(184, 65, 213, 0.8);
+  }
+  100% {
+    background: rgba(84, 5, 13, 0.8);
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    background: rgba(84, 5, 13, 0.8);
+  }
+  25% {
+    background: rgba(26, 193, 228, 0.8);
+  }
+  50% {
+    background: rgba(14, 84, 5, 0.8);
+  }
+  75% {
+    background: rgba(172, 228, 26, 0.8);
+  }
+  90% {
+    background: rgba(184, 65, 213, 0.8);
+  }
+  100% {
+    background: rgba(84, 5, 13, 0.8);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
