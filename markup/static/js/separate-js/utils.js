@@ -1,5 +1,19 @@
 'use strict';
 
+// --------------- AJAX ---------
+var xmlhttp = new XMLHttpRequest();
+var changes = {};
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    changes = JSON.parse(this.responseText);
+  }
+};
+
+xmlhttp.open("GET", "./options.json", false);
+xmlhttp.send();
+// console.log(changes);
+
+
 window.chartColors = {
   red: 'rgb(255, 99, 132)',
   orange: 'rgb(255, 159, 64)',
@@ -10,75 +24,8 @@ window.chartColors = {
   grey: 'rgb(201, 203, 207)'
 };
 
-var changes = [{
-    "url" : "first.com",
-    "title" : "first title",
-    "color" : "1"
-  }, {
-    "url" : "second.com",
-    "title" : "second title",
-    "color" : "0"
-  }, {
-    "url" : "third.com",
-    "title" : "third title",
-    "color" : "1"
-  }, {
-    "url" : "four.com",
-    "title" : "four title",
-    "color" : "1"
-  }, {
-    "url" : "first.com",
-    "title" : "first title",
-    "color" : "1"
-  }, {
-    "url" : "second.com",
-    "title" : "second title",
-    "color" : "0"
-  }, {
-    "url" : "third.com",
-    "title" : "third title",
-    "color" : "1"
-  }, {
-    "url" : "four.com",
-    "title" : "four title",
-    "color" : "1"
-  }, {
-    "url" : "first.com",
-    "title" : "first title",
-    "color" : "1"
-  }, {
-    "url" : "second.com",
-    "title" : "second title",
-    "color" : "0"
-  }, {
-    "url" : "third.com",
-    "title" : "third title",
-    "color" : "1"
-  }, {
-    "url" : "four.com",
-    "title" : "four title",
-    "color" : "1"
-  }, {
-    "url" : "first.com",
-    "title" : "first title",
-    "color" : "1"
-  }, {
-    "url" : "second.com",
-    "title" : "second title",
-    "color" : "0"
-  }, {
-    "url" : "third.com",
-    "title" : "third title",
-    "color" : "1"
-  }, {
-    "url" : "four.com",
-    "title" : "four title",
-    "color" : "1"
-  }]
 
-var sities = ['google', 'min', 'max', 'iop', 'rot' ];
-var labels = ['google', 'min', 'max', 'iop', 'rot' ];
-var colors = ['#18a0d4', '#e1ec45'];
+
 
 (function(global) {
   var Months = [

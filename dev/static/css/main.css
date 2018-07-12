@@ -408,7 +408,7 @@ html, body {
   height: 100%;
 }
 
-canvas {
+canvas.chartjs-render-monitor {
   background-color: rgba(5, 57, 84, 0.8);
 }
 
