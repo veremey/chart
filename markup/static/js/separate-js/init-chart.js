@@ -2,6 +2,8 @@
 var DATA_COUNT = changes.length;
 var MIN_XY = -150;
 var MAX_XY = 100;
+var chrt = document.getElementById('chart-0');
+var ctx = chrt.getContext('2d');
 
 var utils = Samples.utils;
 
@@ -125,6 +127,28 @@ var chart = new Chart('chart-0', {
 });
 
 
+// ***resize
+
+window.addEventListener("resize", handleResize);
+function handleResize() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  chrt.width = window.innerWidth;
+  chrt.height = h;
+  var wp = w+'px';
+  var hp = h+'px';
+  ctx.canvas.setAttribute("style", wp);
+  ctx.canvas.setAttribute("style", hp);
+
+  chart.update();
+}
+
+handleResize(); // First draw
+
+
+// ***resize
+
+
 
 // eslint-disable-next-line no-unused-vars
 function randomize() {
@@ -154,7 +178,6 @@ function removeDataset() {
 // ------    WARNING   -------
 // ---------------------------
 
-var chrt = document.getElementById('chart-0');
 chrt.onclick = function(evt){
 	var activePoint = chart.getElementAtEvent(evt);
 	console.log('activePoint', activePoint);

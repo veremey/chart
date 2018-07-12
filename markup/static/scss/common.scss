@@ -4,9 +4,25 @@ html, body {
     height: 100%;
 }
 
+* {
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+  &::-webkit-scrollbar {
+      width: 1px;
+  }
+
+}
+
+
+
 canvas.chartjs-render-monitor {
    // background-color: rgba(5, 57, 84,0.8);
    animation: colorchange 50s infinite linear;
+   // max-width: 100%;
+   // max-height: 100%
 }
 
 .content {
