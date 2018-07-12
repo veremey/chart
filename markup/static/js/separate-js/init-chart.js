@@ -134,17 +134,31 @@
 			  // } //switch
 
 			   	// console.log(labels);
+
 			    switch (label) {
 			      // add case for each label/slice
-			      case 'google':
-			         alert('clicked on slice 5');
-			         window.open('www.example.com/foo');
+			      case 'first title':
+			         alert('clicked on first title');
+			         window.open('www.first title.com/');
 			         break;
-			      case 'min':
-			         alert('clicked on slice 6');
-			         window.open('www.example.com/bar');
+
+			      case 'second title':
+			         alert('clicked on second title');
+			         window.open('www.secondtitle.com/');
 			         break;
+
+			      case 'third title':
+			         alert('clicked on third title');
+			         window.open('www.third title.com/');
+			         break;
+
+			      case 'four title':
+			         alert('clicked on four title');
+			         window.open('www.fourtitle.com/');
+			         break;
+
 			    }
+
 
 		     // console.log(slice);
 		     // console.log(URL);
